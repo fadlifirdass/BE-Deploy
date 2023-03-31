@@ -1,4 +1,61 @@
 GET http://localhost:5000/products
 
 ###
-GET http://localhost:5000/products/1
+GET http://localhost:5000/productsbyseller
+
+###
+GET http://localhost:5000/products/11
+
+
+###
+GET http://localhost:5000/users
+
+###
+GET http://localhost:5000/users/a164d624-6295-4276-8d01-9b02b1b27659
+
+###
+//create users
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+     "name" : "Fadli Firdaus",
+    "email" : "fadlifirdass@gmail.com",
+    "password" : "123456",
+    "confPassword" : "123456",
+    "role" : "seller"
+    
+}
+
+
+###
+PATCH http://localhost:5000/users/a164d624-6295-4276-8d01-9b02b1b27659
+Content-Type: application/json
+
+{
+    "name" : "Fadli Firdaus UPDATED",
+    "email" : "fadlifirdass@gmail.com",
+    "password" : "123456",
+    "confPassword" : "123456",
+    "role" : "seller"
+    
+}
+
+###
+DELETE http://localhost:5000/users/a164d624-6295-4276-8d01-9b02b1b27659
+
+###
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "fadlifirdass@gmail.com",
+    "password" : "123456"
+}
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
